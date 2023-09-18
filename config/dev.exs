@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :todo, Todo.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "todo",
+  password: "tododb",
   hostname: "localhost",
   database: "todo_dev",
   stacktrace: true,
