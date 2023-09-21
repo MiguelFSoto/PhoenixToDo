@@ -12,3 +12,23 @@
 
   <hr>
 <% end %>
+
+<%= form_for @changeset,  ~p"/tasks", fn f -> %>
+
+  <label>
+    Title: <%= text_input f, :title %>
+  </label>
+
+  <label>
+    Description: <%= text_input f, :description %>
+  </label>
+
+  <%= submit "Submit" %>
+<% end %>
+
+<%!-- 
+<.form for={@changeset} phx-change="validate" phx-submit="save">
+  <.input type="text" field={@form[:title]} />
+  <.input type="email" field={@form[:description]} />
+  <button>Save</button>
+</.form> --%>

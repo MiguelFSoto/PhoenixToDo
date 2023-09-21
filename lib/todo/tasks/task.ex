@@ -5,7 +5,7 @@ defmodule Todo.Tasks.Task do
   schema "tasks" do
     field :description, :string
     field :title, :string
-    field :done, :boolean
+    field :done, :boolean, default: false
 
     timestamps()
   end
