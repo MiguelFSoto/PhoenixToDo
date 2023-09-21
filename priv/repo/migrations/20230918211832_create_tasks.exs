@@ -2,7 +2,7 @@ defmodule Todo.Repo.Migrations.CreateTasks do
   use Ecto.Migration
 
   def change do
-    create table(:tasks) do
+    create_if_not_exists table(:tasks) do
       add :title, :string
       add :description, :string
 

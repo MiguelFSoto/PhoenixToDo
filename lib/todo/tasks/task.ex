@@ -1,10 +1,11 @@
-defmodule Todo.Task do
+defmodule Todo.Tasks.Task do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "tasks" do
     field :description, :string
     field :title, :string
+    field :done, :boolean
 
     timestamps()
   end

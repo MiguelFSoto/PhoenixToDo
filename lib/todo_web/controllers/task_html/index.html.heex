@@ -1,1 +1,14 @@
 <h1>Welcome to the ToDo app</h1>
+
+<%= for item <- @data do %>
+  <h3><%= item.title %></h3>
+  <p><%= item.description %></p>
+
+  <%= if item.done do %>
+    <p style="color:green;">Completed</p>
+  <% else %>
+    <p style="color:red;">To be done </p>
+  <% end %>
+
+  <hr>
+<% end %>
